@@ -62,11 +62,6 @@ class Graph () :
                 for course in courseList[1:]:
                     self.addEdge(course.strip(), courseList[0].strip())
                 
-        
-
-
-
-
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage : python topological.py FILE_NAME")
@@ -77,7 +72,7 @@ if __name__ == "__main__":
             graph = Graph()
             graph.constructGraphFromFile(testFilePath)
             graph.topologicalSort()
-            print("---------%s seconds ---------" % (time.time() - start_time))
+            print("---------Program ended in : %s seconds ---------" % (time.time() - start_time))
             
         else:
             print("Not a valid test file")
